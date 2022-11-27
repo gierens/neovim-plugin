@@ -17,7 +17,7 @@ link above to locate a download for SQLite.
 
 2. Use your favorite Vim or Neovim plugin manager to add Example Plugin.
 With [vim-plug](https://github.com/junegunn/vim-plug), just add this line to your plugin configuration:
-`Plug 'example-user/example-plugin'`.
+`Plug 'gierens/neovim-plugin'`.
 
 ## Usage
 
