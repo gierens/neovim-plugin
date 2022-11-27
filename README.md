@@ -7,6 +7,7 @@ https://github.com/jacobsimpson/nvim-example-lua-plugin .
 It also contains some helpful hints about Lua in Neovim for example.
 
 This example Neovim plugin displays and allows you to update a todo list.
+The todo list is stored in a SQLite 3 database located at `~/.todo.db`.
 
 ## Installation
 
