@@ -37,4 +37,4 @@ example key bindings you can add to your Neovim configuration file:
     nnoremap <LEADER>zc :CompleteTodo<CR>
 
 By default, the leader key is `\`, so this would let you access the functions by
-pressing **\** followed by **Z** followed by one other key.
+pressing **\\** followed by **Z** followed by one other key.
