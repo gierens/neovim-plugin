@@ -1,5 +1,6 @@
 -- Imports the module for handling SQLite.
 local sqlite = require("ljsqlite3")
+local create = require("neovim-plugin.create")
 
 -- Creates an objects for the module.
 local M = {}
@@ -7,13 +8,14 @@ local M = {}
 -- Inserts a new todo task, promting the
 -- user to enter a description
 function M.insert_todo()
+    create.create_db_if_not_exists()
     local todo_description = ""
     repeat
         todo_description = vim.fn.input("Enter a description (150 characters or fewer): ")
         print("")
     until (todo_description ~= "") and (string.len(todo_description) <= 150)
 
-    local db = sqlite.open("todo.db")
+    local db = sqlite.open(create.db_path)
     db:exec("INSERT INTO todo_list (description) VALUES ('" .. todo_description .. "');")
     db:close()
 end
@@ -22,7 +24,8 @@ end
 -- tasks, and prompts the user to select
 -- one for completing.
 function M.complete_todo()
-    local db = sqlite.open("todo.db")
+    create.create_db_if_not_exists()
+    local db = sqlite.open(create.db_path)
 
     local todo_completed = -1
     local todo_selected = -1
