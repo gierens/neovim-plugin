@@ -1,2 +1,3 @@
 # neovim-plugin
-Sample for a Lua-based Neovim plugin.
+Sample for the Neovim plugin written in Lua, based of the Linode tutorial:
+https://www.linode.com/docs/guides/writing-a-neovim-plugin-with-lua/ .
